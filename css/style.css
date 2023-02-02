@@ -1,6 +1,6 @@
 body {
-  font-family: "Shippori Mincho", serif;
   background-color: #050507;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   height: 4000px;
 }
@@ -83,6 +83,7 @@ body {
           transform: translateY(0px);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  z-index: 9;
 }
 
 #mainvisual {
@@ -119,4 +120,188 @@ body {
           transform: translateY(0);
   -webkit-transition: 2s;
   transition: 2s;
+}
+
+.information {
+  color: white;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+.information h2 {
+  padding-bottom: 5px;
+  font-size: 3.75rem;
+  border-bottom: 1px solid white;
+  width: 362px;
+  margin: 0 auto 45px auto;
+  letter-spacing: 2px;
+}
+.information h3 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+.information p {
+  margin-bottom: 25px;
+  font-size: 1.125rem;
+  line-height: 27px;
+}
+.information p span {
+  font-size: 1.5rem;
+}
+
+.information_active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.gallery {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.gallery h1 {
+  padding-bottom: 5px;
+  font-size: 3.75rem;
+  border-bottom: 1px solid white;
+  width: 231px;
+  margin: 100px auto 45px auto;
+  letter-spacing: 2px;
+  color: white;
+  opacity: 0;
+  -webkit-transition: 4s;
+  transition: 4s;
+}
+.gallery .gallery_title_active {
+  opacity: 1;
+  -webkit-transition: 4s;
+  transition: 4s;
+}
+.gallery .picture1 {
+  width: 355px;
+  height: 488px;
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+.gallery .picture1 img {
+  width: 100%;
+}
+.gallery .picture2 {
+  margin-left: auto;
+  width: 355px;
+  height: 235px;
+  margin-top: 60px;
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+.gallery .picture2 img {
+  width: 100%;
+}
+.gallery .picture3 {
+  width: 355px;
+  height: 355px;
+  margin-top: 60px;
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+.gallery .picture3 img {
+  width: 100%;
+}
+.gallery .picture4 {
+  width: 355px;
+  height: 533px;
+  margin-top: 60px;
+  margin-left: auto;
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+.gallery .picture4 img {
+  width: 100%;
+}
+.gallery .picture5 {
+  margin-top: 60px;
+  width: 355px;
+  height: 444px;
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+.gallery .picture5 img {
+  width: 100%;
+}
+.gallery .picture6 {
+  width: 355px;
+  height: 235px;
+  margin-top: 60px;
+  margin-left: auto;
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+.gallery .picture6 img {
+  width: 100%;
+}
+.gallery .picture_active {
+  opacity: 1;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.right_bottom_menu {
+  border: 1px solid white;
+  color: white;
+  position: fixed;
+  bottom: 200px;
+  right: -143px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-transform: translateX(50px) rotate(90deg);
+          transform: translateX(50px) rotate(90deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.right_bottom_menu a {
+  width: 165px;
+  font-size: 0.875rem;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  padding: 15px 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.right_bottom_menu a:nth-child(2) {
+  border-right: solid 1px #fff;
+}
+
+.right_bottom_menu_active {
+  -webkit-transform: translateX(0px) rotate(90deg);
+          transform: translateX(0px) rotate(90deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */
