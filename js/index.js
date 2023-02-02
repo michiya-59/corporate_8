@@ -38,7 +38,8 @@ function heade_fadein(scroll){
 function item_fadein(scroll, windowHeight){
   let site_title_height = $('.site_main_h1_text').offset().top;
   let information_height = $('.information').offset().top;
-  let gallery_title = $('.gallery_title').offset().top;
+  let gallery_title_height = $('.gallery_title').offset().top;
+  let access_hewi = $('.access').offset().top;
 
   // site_main_h1のフェードイン処理
   if (scroll > site_title_height - windowHeight - 50){
@@ -51,11 +52,17 @@ function item_fadein(scroll, windowHeight){
   }
 
   // galleryのフェードイン処理
-  if (scroll > gallery_title - windowHeight){
+  if (scroll > gallery_title_height - windowHeight){
     $('.gallery_title').addClass('gallery_title_active');
     $('.right_bottom_menu').addClass('right_bottom_menu_active');
   } else{
     $('.right_bottom_menu').removeClass('right_bottom_menu_active');
+  }
+
+  if (scroll > access_hewi - windowHeight){
+    $('.access_back_img').fadeIn();
+  } else{
+    $('.access_back_img').fadeOut();
   }
 
   // 写真をループで回しているメソッド
@@ -64,7 +71,7 @@ function item_fadein(scroll, windowHeight){
 
 // 写真をループで回しているメソッド
 function picture_fadein(scroll, windowHeight, class_name){
-  for (let i = 1; i < 6; i++) {
+  for (let i = 1; i < 7; i++) {
     let element = $(`.${class_name}${i}`).offset().top;
 
     if (scroll > element - windowHeight - 50){
