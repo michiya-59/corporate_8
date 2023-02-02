@@ -143,6 +143,7 @@ body{
   max-width: 800px;
   padding: 0 30px;
   margin: 0 auto;
+  margin-bottom: 480px;
   h1{
     padding-bottom: 5px;
     font-size: 3.75rem;
@@ -240,6 +241,7 @@ body{
   bottom: 200px;
   right: -143px;
   display: flex;
+  z-index: 30;
   text-align: center;
   transform: translateX(50px) rotate(90deg);
   transition: .5s;
@@ -258,4 +260,49 @@ body{
 .right_bottom_menu_active{
   transform: translateX(0px) rotate(90deg);
   transition: .5s;
+}
+
+.access{
+  color: white;
+  text-align: center;
+  .access_title{
+    padding-bottom: 5px;
+    font-size: 3.75rem;
+    border-bottom: 1px solid white;
+    width: 197px;
+    margin: 0px auto 45px auto;
+    letter-spacing: 2px;
+    color: white;
+  }
+  h2{
+    margin-bottom: 25px;
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+  p{
+    margin-bottom: 25px;
+    line-height: 23px;
+  }
+  a{
+    border: 1px solid white;
+    padding: 14.5px 90.5px;
+    display: inline-block;
+    margin: 10px 0 480px 0;
+    opacity: .5s;
+    &:hover{
+      background-color: #050507;
+      opacity: .5s;
+    }
+  }
+}
+
+.access_back_img{
+  background: url('../image/bg.jpg') center center repeat !important;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
 }
