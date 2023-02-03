@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #050507;
   font-family: "Source Sans Pro", sans-serif;
@@ -87,10 +88,13 @@ body {
 }
 
 #mainvisual {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* スクロールで画像を拡大させた際に、横スクロールが出ないよう設定 */
   overflow-x: hidden;
 }
 #mainvisual img {
@@ -420,4 +424,34 @@ body {
 }
 .contact a:hover::after {
   opacity: 0.7;
+}
+
+.footer {
+  padding: 80px 30px;
+  border-top: 1px solid white;
+  color: white;
+  font-size: 0.75rem;
+}
+.footer .footer_top {
+  margin-bottom: 30px;
+}
+.footer .footer_top p {
+  margin-bottom: 5px;
+}
+.footer .footer_top p:nth-child(3) {
+  line-height: 18px;
+}
+.footer .footer_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer .footer_bottom .sns_menu a {
+  margin-right: 15px;
+}
+.footer .footer_bottom .copyright {
+  margin-left: auto;
+}
+.footer .footer_bottom .copyright a:first-of-type {
+  margin-right: 30px;
 }/*# sourceMappingURL=style.css.map */

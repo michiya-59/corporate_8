@@ -79,8 +79,9 @@ body{
 }
 
 #mainvisual{
-  width: 100%;
   display: flex;
+  justify-content: center;
+  /* スクロールで画像を拡大させた際に、横スクロールが出ないよう設定 */
   overflow-x: hidden;
   img{
     width: calc(100% / 3);
@@ -363,6 +364,34 @@ body{
     }
     &:hover::after{
       opacity: 0.7;
+    }
+  }
+}
+
+.footer{
+  padding: 80px 30px;
+  border-top: 1px solid white;
+  color: white;
+  font-size: 0.75rem;
+  .footer_top{
+    margin-bottom: 30px;
+    p{
+      margin-bottom: 5px;
+      &:nth-child(3){
+        line-height: 18px;
+      }
+    }
+  }
+  .footer_bottom{
+    display: flex;
+    .sns_menu a{
+      margin-right: 15px;
+    }
+    .copyright{
+      margin-left: auto;
+      a:first-of-type{
+        margin-right: 30px;
+      }
     }
   }
 }
