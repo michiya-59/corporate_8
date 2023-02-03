@@ -39,7 +39,8 @@ function item_fadein(scroll, windowHeight){
   let site_title_height = $('.site_main_h1_text').offset().top;
   let information_height = $('.information').offset().top;
   let gallery_title_height = $('.gallery_title').offset().top;
-  let access_hewi = $('.access').offset().top;
+  let access_height = $('.access').offset().top;
+  let contact_height = $('.contact').offset().top;
 
   // site_main_h1のフェードイン処理
   if (scroll > site_title_height - windowHeight - 50){
@@ -58,9 +59,14 @@ function item_fadein(scroll, windowHeight){
   } else{
     $('.right_bottom_menu').removeClass('right_bottom_menu_active');
   }
-
-  if (scroll > access_hewi - windowHeight){
-    $('.access_back_img').fadeIn();
+  
+  if (scroll > access_height - windowHeight){
+    $('.right_bottom_menu').removeClass('right_bottom_menu_active');
+    if (scroll < contact_height - windowHeight){
+      $('.access_back_img').fadeIn();
+    } else{
+      $('.access_back_img').fadeOut();
+    }
   } else{
     $('.access_back_img').fadeOut();
   }
