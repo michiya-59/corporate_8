@@ -335,11 +335,13 @@ body {
   padding: 14.5px 90.5px;
   display: inline-block;
   margin: 10px 0 480px 0;
-  opacity: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .access a:hover {
   background-color: #050507;
-  opacity: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .access_back_img {
@@ -351,4 +353,71 @@ body {
   left: 0;
   z-index: -1;
   display: none;
+}
+
+.contact {
+  color: white;
+  height: 500px;
+}
+.contact h1 {
+  padding-bottom: 5px;
+  font-size: 3.75rem;
+  border-bottom: 1px solid white;
+  width: 240px;
+  margin: 0px auto 45px auto;
+  letter-spacing: 2px;
+  color: white;
+}
+.contact a {
+  padding: 30px 0px;
+  width: 400px;
+  display: block;
+  border: 1px solid white;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  position: relative;
+}
+.contact a:hover {
+  opacity: 0.7;
+}
+.contact a::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  background: white;
+  top: 57%;
+  right: -43px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact a::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background: white;
+  right: -45.2px;
+  bottom: 36.7px;
+  -webkit-transform: rotate(26deg);
+          transform: rotate(26deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact a:hover::before {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact a:hover::after {
+  -webkit-transform: rotate(31deg) translateX(10px);
+          transform: rotate(31deg) translateX(10px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  bottom: 42.7px;
+  right: -47px;
+}
+.contact a:hover::after {
+  opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */
