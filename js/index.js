@@ -4,10 +4,10 @@ $(function(){
     let scroll = $(window).scrollTop();
     let windowHeight = $(window).height();
 
+    nav_fadein(); // ヘッダーメニューのフェードイン 
     mv_scale(scroll); // メインビジュアルの拡大・縮小
     heade_fadein(scroll); // フェードイン
     item_fadein(scroll, windowHeight) // それぞれの項目のフェードイン
-    nav_fadein(); // ヘッダーメニューのフェードイン 
   });
   
   $(window).on('load resize', function() {
@@ -19,9 +19,20 @@ $(function(){
 });
 
 function nav_fadein(){
-  // ハンバガーメニュー
   $('.hamburger').click(function(){
     $('.nav_menu').toggleClass('nav_menu_active');
+  });
+  $('.nav_information').click(function(){
+    $('.nav_menu').removeClass('nav_menu_active');
+  });
+  $('.nav_gallery').click(function(){
+    $('.nav_menu').removeClass('nav_menu_active');
+  });
+  $('.nav_access').click(function(){
+    $('.nav_menu').removeClass('nav_menu_active');
+  });
+  $('.nav_contact').click(function(){
+    $('.nav_menu').removeClass('nav_menu_active');
   });
 }
 
