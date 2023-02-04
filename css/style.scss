@@ -1,3 +1,9 @@
+@mixin media{
+  @media screen and (max-width: 900px) {
+    @content
+  }
+}
+
 body{
   background-color: #050507;
   font-family: 'Source Sans Pro', sans-serif;
@@ -66,6 +72,9 @@ body{
   opacity: 0;
   transform: translateY(-300px);
   transition: .5s;
+  @include media{
+    padding-top: 80px;
+  }
   ul li{
     margin-bottom: 20px;
   }
@@ -99,6 +108,10 @@ body{
   opacity: 0;
   transform: translateY(100px);
   transition: 2s;
+  @include media{
+    font-size: 3rem;
+    margin: 30px 0 50px 0;
+  }
 }
 .site_main_h1_text_active{
   opacity: 1;
@@ -119,18 +132,32 @@ body{
     width: 362px;
     margin: 0 auto 45px auto;
     letter-spacing: 2px;
+    @include media{
+      width: 205px;
+      font-size: 2rem;
+    }
   }
   h3{
     font-size: 2.5rem;
     margin-bottom: 25px;
     font-weight: 500;
+    @include media{
+      font-size: 2rem;
+    }
   }
   p{
     margin-bottom: 25px;
     font-size: 1.125rem;
     line-height: 27px;
+    @include media{
+      font-size: 1rem;
+      line-height: 20px;
+    }
     span{
       font-size: 1.5rem;
+      @include media{
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -155,17 +182,27 @@ body{
     color: white;
     opacity: 0;
     transition: 4s;
+    @include media{
+      font-size: 2rem;
+      width: 130px;
+      margin: 80px auto 30px auto;
+    }
   }
   .gallery_title_active{
     opacity: 1;
-    transition: 4s;
+    transition: 3s;
   }
   .picture1{
     width: 355px;
     height: 488px;
     opacity: 0;
     transform: translateY(200px);
-    transition: 3s;
+    transition: 2s;
+    @include media{
+      width: 100%;
+      height: 433px;
+      margin-bottom: 30px;
+    }
     img{
       width: 100%;
     }
@@ -177,7 +214,13 @@ body{
     margin-top: 60px;
     opacity: 0;
     transform: translateY(200px);
-    transition: 3s;
+    transition: 2s;
+    @include media{
+      width: 100%;
+      height: 209px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
     img{
       width: 100%;
     }
@@ -188,7 +231,13 @@ body{
     margin-top: 60px;
     opacity: 0;
     transform: translateY(200px);
-    transition: 3s;
+    transition: 2s;
+    @include media{
+      height: 315px;
+      width: 315px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
     img{
       width: 100%;
     }
@@ -200,7 +249,13 @@ body{
     margin-left: auto;
     opacity: 0;
     transform: translateY(200px);
-    transition: 3s;
+    transition: 2s;
+    @include media{
+      width: 100%;
+      height: 473px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
     img{
       width: 100%;
     }
@@ -211,7 +266,13 @@ body{
     height: 444px;
     opacity: 0;
     transform: translateY(200px);
-    transition: 3s;
+    transition: 2s;
+    @include media{
+      width: 100%;
+      margin-top: 0;
+      height: 394px;
+      margin-bottom: 30px;
+    }
     img{
       width: 100%;
     }
@@ -223,7 +284,13 @@ body{
     margin-left: auto;
     opacity: 0;
     transform: translateY(200px);
-    transition: 3s;
+    transition: 2s;
+    @include media{
+      width: 100%;
+      height: 209px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
     img{
       width: 100%;
     }
@@ -274,6 +341,10 @@ body{
     margin: 0px auto 45px auto;
     letter-spacing: 2px;
     color: white;
+    @include media{
+      font-size: 2rem;
+      width: 114px;
+    }
   }
   h2{
     margin-bottom: 25px;
@@ -311,6 +382,9 @@ body{
 .contact{
   color: white;
   height: 500px;
+  @include media{
+    padding: 30px;
+  }
   h1{
     padding-bottom: 5px;
     font-size: 3.75rem;
@@ -319,6 +393,10 @@ body{
     margin: 0px auto 45px auto;
     letter-spacing: 2px;
     color: white;
+    @include media{
+      width: 135px;
+      font-size: 2rem;
+    }
   }
   a{
     padding: 30px 0px;
@@ -328,6 +406,9 @@ body{
     margin: 0 auto 20px auto;
     text-align: center;
     position: relative;
+    @include media{
+      width: 100%
+    }
     &:hover{
       opacity: 0.7;
     }
@@ -340,6 +421,9 @@ body{
       top: 57%;
       right: -43px;
       transition: .5s;
+      @include media{
+        display: none;
+      }
     }
     &::after{
       content: "";
@@ -351,6 +435,9 @@ body{
       bottom: 36.7px;
       transform: rotate(26deg);
       transition: .5s;
+      @include media{
+        display: none;
+      }
     }
     &:hover::before{
       transform: translateX(10px);
@@ -384,11 +471,17 @@ body{
   }
   .footer_bottom{
     display: flex;
+    @include media{
+      flex-direction: column;
+    }
     .sns_menu a{
       margin-right: 15px;
     }
     .copyright{
       margin-left: auto;
+      @include media{
+        margin: 30px 0 0 0;
+      }
       a:first-of-type{
         margin-right: 30px;
       }

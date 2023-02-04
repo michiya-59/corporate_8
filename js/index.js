@@ -9,6 +9,7 @@ $(function(){
     item_fadein(scroll, windowHeight) // それぞれの項目のフェードイン
     nav_fadein(); // ヘッダーメニューのフェードイン 
   });
+  
   $(window).on('load resize', function() {
     // スクロール位置を取得
     let scroll = $(window).scrollTop();
@@ -24,6 +25,7 @@ function nav_fadein(){
   });
 }
 
+// ヘッダーの項目ナビゲーションメニューのフェードイン
 function heade_fadein(scroll){
   // ヘッダー項目
   if(scroll > 200){
@@ -35,6 +37,7 @@ function heade_fadein(scroll){
   }
 }
 
+// それぞれの要素をフェードインしているメソッド
 function item_fadein(scroll, windowHeight){
   let site_title_height = $('.site_main_h1_text').offset().top;
   let information_height = $('.information').offset().top;
@@ -55,13 +58,19 @@ function item_fadein(scroll, windowHeight){
   // galleryのフェードイン処理
   if (scroll > gallery_title_height - windowHeight){
     $('.gallery_title').addClass('gallery_title_active');
-    $('.right_bottom_menu').addClass('right_bottom_menu_active');
+    if (window.innerWidth > 900){
+      $('.right_bottom_menu').addClass('right_bottom_menu_active');
+    }
   } else{
-    $('.right_bottom_menu').removeClass('right_bottom_menu_active');
+    if (window.innerWidth > 900){
+      $('.right_bottom_menu').removeClass('right_bottom_menu_active');
+    }
   }
   
   if (scroll > access_height - windowHeight){
-    $('.right_bottom_menu').removeClass('right_bottom_menu_active');
+    if (window.innerWidth > 900){
+      $('.right_bottom_menu').removeClass('right_bottom_menu_active');
+    }
     if (scroll < contact_height - windowHeight){
       $('.access_back_img').fadeIn();
     } else{
@@ -75,7 +84,7 @@ function item_fadein(scroll, windowHeight){
   picture_fadein(scroll, windowHeight, "picture")
 }
 
-// 写真をループで回しているメソッド
+// 写真をループで回してフェードインしているメソッド
 function picture_fadein(scroll, windowHeight, class_name){
   for (let i = 1; i < 7; i++) {
     let element = $(`.${class_name}${i}`).offset().top;
